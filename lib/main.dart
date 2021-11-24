@@ -13,6 +13,7 @@ class AirbnbApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Airbnb',
         primarySwatch: Colors.blue,
       ),
       home: const AirbnbHomePage(title: 'Flutter Demo Home Page'),
