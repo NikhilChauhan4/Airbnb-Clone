@@ -33,7 +33,7 @@ class AirbnbHomePage extends StatefulWidget {
 class _BottomNavStatefulWidgetState extends State<AirbnbHomePage> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle = TextStyle(
-      fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black87);
+      fontSize: 30, color: Colors.black87);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Explore',
@@ -78,9 +78,9 @@ class _BottomNavStatefulWidgetState extends State<AirbnbHomePage> {
           BottomNavigationBarItem(
               label: 'Trips', icon: Icon(Icons.messenger_outline)),
           BottomNavigationBarItem(
-              label: 'Inbox', icon: Icon(Icons.person_outline)),
+              label: 'Inbox', icon: Icon(Icons.settings_outlined)),
           BottomNavigationBarItem(
-              label: 'Profile', icon: Icon(Icons.settings_outlined)),
+              label: 'Profile', icon: Icon(Icons.person_outline)),
         ],
         currentIndex: _selectedIndex,
         unselectedItemColor: optionStyle.color,

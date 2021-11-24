@@ -2,6 +2,17 @@
 
 A new Flutter project.
 
+### Screens
+Profile Screen        |     
+:-------------------------:|
+<img src="art/screen1.png" width=240 />  |
+
+### Status: 🚧 In progress
+## TODO
+- UI & Styling [In Progress]
+- Business Logic [TODO]
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -10,13 +10,13 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfileElements extends State<ProfilePage> {
   static const TextStyle menuItemsStyle =
-      TextStyle(fontFamily: 'Airbnb', fontSize: 23, color: Colors.black87);
+      TextStyle(fontFamily: 'Airbnb', fontSize: 22, color: Colors.black87,fontWeight: FontWeight.normal);
 
   static const TextStyle menuItemsStyleSmall =
-      TextStyle(fontFamily: 'Airbnb', fontSize: 18, color: Colors.black54);
+      TextStyle(fontFamily: 'Airbnb', fontSize: 18, color: Colors.black54,fontWeight: FontWeight.normal);
 
   static const TextStyle menuHeadingStyle =
-      TextStyle(fontFamily: 'Airbnb', fontSize: 16, color: Colors.black54);
+      TextStyle(fontFamily: 'Airbnb', fontSize: 16, color: Colors.black54,fontWeight: FontWeight.normal);
 
   static const Divider menuItemsDivider = Divider(height: 20, thickness: 1);
 
@@ -25,7 +25,7 @@ class _ProfileElements extends State<ProfilePage> {
     return Container(
         height: double.infinity,
         width: double.infinity,
-        margin: EdgeInsets.only(left: 16, right: 16),
+        margin: const EdgeInsets.only(left: 16, right: 16),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -35,7 +35,7 @@ class _ProfileElements extends State<ProfilePage> {
                   Container(
                       width: 120.0,
                       height: 120.0,
-                      margin: EdgeInsets.only(right: 8, top: 16, bottom: 16),
+                      margin: const EdgeInsets.only(right: 8, top: 16, bottom: 16),
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
@@ -44,7 +44,7 @@ class _ProfileElements extends State<ProfilePage> {
                                   "https://i.imgur.com/BoN9kdC.png")))),
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text("Nikhil",
                             style: TextStyle(
                                 fontFamily: 'Airbnb',
@@ -65,7 +65,7 @@ class _ProfileElements extends State<ProfilePage> {
                   margin: const EdgeInsets.only(bottom: 32,left: 8,right: 8),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text("Earn money from your extra space"),
                         Text("Learn more",
                             style: TextStyle(
@@ -75,7 +75,7 @@ class _ProfileElements extends State<ProfilePage> {
                                 fontWeight: FontWeight.normal)),
                       ])),
               menuItemsDivider,
-              Align(
+              const Align(
                   child: Text("ACCOUNT SETTINGS", style: menuHeadingStyle),
                   alignment: Alignment.topLeft),
               Row(
@@ -142,7 +142,7 @@ class _ProfileElements extends State<ProfilePage> {
                 ],
               ),
               menuItemsDivider,
-              Align(
+              const Align(
                 child: Text('HOSTING', style: menuHeadingStyle),
                 alignment: Alignment.topLeft,
               ),
@@ -191,7 +191,7 @@ class _ProfileElements extends State<ProfilePage> {
                 ],
               ),
               menuItemsDivider,
-              Align(
+              const Align(
                 child: Text('SUPPORT', style: menuHeadingStyle),
                 alignment: Alignment.topLeft,
               ),
@@ -245,7 +245,7 @@ class _ProfileElements extends State<ProfilePage> {
                 ],
               ),
               const Text(
-                  "Let our team know about converns related to home sharing activity in your area",
+                  "Let our team know about concerns related to home sharing activity in your area",
                   style: menuItemsStyleSmall),
               menuItemsDivider,
               Row(
@@ -278,7 +278,7 @@ class _ProfileElements extends State<ProfilePage> {
                 ],
               ),
               menuItemsDivider,
-              Align(
+              const Align(
                 child: Text('LEGAL', style: menuHeadingStyle),
                 alignment: Alignment.topLeft,
               ),
@@ -299,7 +299,7 @@ class _ProfileElements extends State<ProfilePage> {
               menuItemsDivider,
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [const Text("Logout", style: menuItemsStyle)],
+                children: const [Text("Logout", style: menuItemsStyle)],
               ),
               menuItemsDivider,
               const Center(
