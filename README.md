@@ -5,7 +5,7 @@ A new Flutter project.
 ### Screens
 Profile Screen        |     
 :-------------------------:|
-<img src="art/screen1.png" width=240 />  |
+<img src="screenshots/profile_screen.png" width=240 />  |
 
 ### Status: 🚧 In progress
 ## TODO
