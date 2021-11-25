@@ -3,11 +3,12 @@
 A new Flutter project.
 
 ### Screens
-Profile Screen        |     
-:-------------------------:|
-<img src="screenshots/profile_screen.png" width=240 />  |
+Profile Screen        |Inbox Screen        |      
+:-------------------------:|:-------------------------:|
+<img src="screenshots/profile_screen.png" width=240 />  |<img src="screenshots/inbox_screen.png" width=240 />  |
 
 ### Status: 🚧 In progress
+
 ## TODO
 - UI & Styling [In Progress]
 - Business Logic [TODO]
