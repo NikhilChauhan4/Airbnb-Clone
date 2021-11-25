@@ -1,3 +1,4 @@
+import 'package:airbnb_clone/inbox.dart';
 import 'package:airbnb_clone/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -31,9 +32,29 @@ class AirbnbHomePage extends StatefulWidget {
 }
 
 class _BottomNavStatefulWidgetState extends State<AirbnbHomePage> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle = TextStyle(
-      fontSize: 30, color: Colors.black87);
+  int _pageIndex = 0;
+  late PageController _pageController;
+  final List<Widget> _pages = <Widget>[const InboxPage(), const ProfilePage()];
+
+  void onPageChanged(int page) {
+    setState(() {
+      _pageIndex = page;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: _pageIndex);
+  }
+
+  void onTabTapped(int index) {
+    _pageController.animateToPage(index,
+        duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+  }
+
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, color: Colors.black87);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Explore',
@@ -57,12 +78,6 @@ class _BottomNavStatefulWidgetState extends State<AirbnbHomePage> {
     )
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,17 +97,15 @@ class _BottomNavStatefulWidgetState extends State<AirbnbHomePage> {
           BottomNavigationBarItem(
               label: 'Profile', icon: Icon(Icons.person_outline)),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: _pageIndex,
         unselectedItemColor: optionStyle.color,
         selectedItemColor: Colors.pinkAccent,
-        onTap: _onItemTapped,
+        onTap: onTabTapped,
       ),
-      body: Navigator(
-        onGenerateRoute: (profile) {
-          Widget page = const ProfilePage();
-          if (profile.name == 'Profile') page = ProfilePage();
-          return MaterialPageRoute(builder: (_) => page);
-        },
+      body: PageView(
+        children: _pages,
+        onPageChanged: onPageChanged,
+        controller: _pageController,
       ),
     );
   }
